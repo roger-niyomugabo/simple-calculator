@@ -1,0 +1,92 @@
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-weight: bold;
+    
+    font-family: sans-serif;
+}
+
+body{
+    background: aliceblue;
+}
+
+#calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 600px;
+    grid-template-columns: repeat(4,80px);
+    grid-template-rows: minmax(100px, auto) repeat(6, 80px);
+    /* grid-template-rows: minmax(120px,auto) repeat(5,100px); */
+    /* grid-template-rows: repeat(5,100px); */
+}
+
+#keyboard button{
+    cursor: pointer;
+    font-size: 1em;
+    border: 1px solid #1f1f1f;
+    outline: none;
+    background-color: lightslategray;
+    color: whitesmoke;
+}
+
+#equal{
+    grid-row: span 2;
+}
+
+#zero{
+    grid-column: span 2;
+}
+
+#result{
+    grid-column: 1 / -1;
+    background-color: rgba(119, 136, 153, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0 20px;
+    border-top: 2px solid black;
+    border-radius:5px 5px 0px 0px;
+}
+
+#result #history{
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+
+#result #output{
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+
+.number{ 
+    background-color: rgba(28, 47, 66, 0.75);
+    border: 1px solid whitesmoke;
+}
+
+#equal{
+    background-color: orange;
+}
+
+.operator{
+    background-color: #3196e9 ;
+    border: 1px solid whitesmoke;
+}
+
+.special{
+    display: none;
+}
+
+#sin{
+    display: none;
+}
+
+#cos{
+    display: none;
+}
+
+#signs{
+    display: none;
+}
