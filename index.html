@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>calculator</title>
-</head>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>calculator</title>
+    </head>
+<body >
+  <div class="container">
+  <form id="calculator">
 
-<body>
-    <div id="container">
-        <div id="calculator">
-            <div id="result">
-                <div id="history">
-                    <p id="history-value"></p>
-                </div>
-                <div id="output">
-                    <p id="output-value"></p>
-                </div>
-            </div>
-
-                <button class="operation" id="clear">func</button>
-                <button class="operationsign" id="sign">signs</button>
-                <button class="operator" id="backspace">delete</button>
-                <button class="operator" id="/">/</button>
-                <button class="operator" id="*">*</button>
-                <button class="number" id="7">7</button>
-                <button class="number" id="8">8</button>
-                <button class="number" id="9">9</button>
-                <button class="operator" id="minus">-</button>
-                <button class="operator" id="cos">cos</button>
-                <button class="number" id="4">4</button>
-                <button class="number" id="5">5</button>
-                <button class="number" id="6">6</button>
-                <button class="operator" id="plus">+</button>
-                <button class="operator" id="sin">sin</button>
-                <button class="number" id="1">1</button>
-                <button class="number" id="2">2</button>
-                <button class="number" id="3">3</button>
-                <button class="operator" id="equal">=</button>
-                <button class="number" id="zero">0</button>
-                <button class="number" id="dot">.</button>
-                
-        </div>
+    <div class="" id="screen" >
+      <input type="text" id="display" value="">
     </div>
-    <script src="index.js"></script>
+    
+        <input type="button" id="func" class="color1 " value="func">
+        <input type="button" id="signs" class="color1 " value="signs">
+        <input type="button" id="clear" class=" color1" value="delete" >
+        <input type="button" class="button color1 operation" value="/" onclick="screenDisplay('/')" >
+        <input type="button" id="star" class="button color1 operation" value="*" onclick="screenDisplay('*')" >
+        <input type="button" id="bracket" class="button color1" value=")" onclick="screenDisplay(')')">
+
+        <input type="button" class="button " value="7" onclick="screenDisplay('7')">
+        <input type="button" class="button " value="8" onclick="screenDisplay('8')">
+        <input type="button" class="button " value="9" onclick="screenDisplay('9')">
+        <input type="button" id="minus" class="button color1 operation" value="-" onclick="screenDisplay('-')">
+        <input type="button" id="cos" class="button color1" value="cos(" onclick="solve('Math.cos(')">
+    
+        <input type="button" class="button " value="4" onclick="screenDisplay('4')">
+        <input type="button" class="button " value="5" onclick="screenDisplay('5')">
+        <input type="button" class="button " value="6" onclick="screenDisplay('6')">
+        <input type="button" id="plus" class="button color1 operation" value="+" onclick="screenDisplay('+')">
+        <input type="button" id="sin" class="button color1" value="sin("  onclick="solve('Math.sin(')">
+  
+        <input type="button" class="button " value="1" onclick="screenDisplay('1')">
+        <input type="button" class="button " value="2" onclick="screenDisplay('2')">
+        <input type="button" class="button " value="3" onclick="screenDisplay('3')">
+   
+        <input type="button" id="equal" class="span1" value="=">
+        <input type="button" class="button span2" value="0" onclick="screenDisplay('0')">
+        <input type="button" class="button " value="." onclick="screenDisplay('.')">
+          
+  </form>
+</div>
+<script src="index.js"></script>
 </body>
 </html>
