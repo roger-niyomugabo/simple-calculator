@@ -1,9 +1,7 @@
-
-*, *::before, *::after{
+*{
     box-sizing: border-box;
-    font-weight: bold;
-    
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 body{
@@ -12,81 +10,70 @@ body{
 
 #calculator{
     display: grid;
+    position: relative;
     justify-content: center;
     align-content: center;
     min-height: 600px;
     grid-template-columns: repeat(4,80px);
-    grid-template-rows: minmax(100px, auto) repeat(6, 80px);
-    /* grid-template-rows: minmax(120px,auto) repeat(5,100px); */
-    /* grid-template-rows: repeat(5,100px); */
+    grid-template-rows: minmax(80px, auto) repeat(5, 80px);
 }
 
-#keyboard button{
-    cursor: pointer;
-    font-size: 1em;
-    border: 1px solid #1f1f1f;
-    outline: none;
-    background-color: lightslategray;
-    color: whitesmoke;
-}
-
-#equal{
-    grid-row: span 2;
-}
-
-#zero{
-    grid-column: span 2;
-}
-
-#result{
-    grid-column: 1 / -1;
-    background-color: rgba(119, 136, 153, 0.75);
-    display: flex;
-    align-items: flex-end;
-    justify-content: right;
+#display{
+    display: grid;
+    height: 80px;
+    width: 20rem;
+    font-size: 20px;
     word-wrap: break-word;
     word-break: break-all;
-    padding: 0 20px;
     border-top: 2px solid black;
     border-radius:5px 5px 0px 0px;
+    text-align: right;
+    padding: 0 20px;
+    color: whitesmoke;
+    background-color: rgb(19, 52, 87);
 }
 
-#result #history{
-    color: whitesmoke;
-    font-size: 1.5rem;
-  }
-
-#result #output{
-    color: whitesmoke;
-    font-size: 1.5rem;
-  }
-
-.number{ 
-    background-color: rgba(28, 47, 66, 0.75);
-    border: 1px solid whitesmoke;
+#screen{
+    grid-column: 1 / -1;
+    display: flex;
 }
 
-#equal{
+#calculator .button{
+    display: grid;
+    color: rgba(245, 245, 245, 0.425);
+    place-items: center;
+    background-color: rgb(19, 52, 87);
+}
+
+#calculator .span1{
+    grid-row: span 2;
+    height: 160px;
     background-color: orange;
 }
 
-.operator{
-    background-color: #3196e9 ;
-    border: 1px solid whitesmoke;
+#calculator .span2{
+    grid-column: span 2;
+    width: 160px;
 }
 
-.special{
+#calculator .color1{
+    background-color: #1b5f97 ;
+    color: rgba(245, 245, 245, 0.425);
+}
+
+#calculator #cos{
+    display: none;
+
+}
+
+#calculator #sin{
     display: none;
 }
 
-#sin{
+#calculator #bracket{
     display: none;
 }
 
-#cos{
-    display: none;
-}
-
-#signs{
+#calculator #signs{
     display: none;
 }
